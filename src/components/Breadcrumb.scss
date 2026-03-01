@@ -1,0 +1,64 @@
+.breadcrumb-container {
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 面包屑样式调整 */
+.breadcrumb-container .ant-breadcrumb {
+  margin: 0;
+}
+
+.breadcrumb-container .ant-breadcrumb-link {
+  font-size: 0.875rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-container .ant-breadcrumb-link:hover {
+  color: #333;
+}
+
+.breadcrumb-container .ant-breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+/* 面包屑图标样式 */
+.breadcrumb-icon {
+  margin-right: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* 面包屑激活状态 */
+.breadcrumb-active {
+  color: #333 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* 面包屑非激活状态 */
+.breadcrumb-inactive {
+  color: #999 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* 首页链接样式 */
+.breadcrumb-container .ant-breadcrumb-link:first-child {
+  color: #999;
+}
+
+.breadcrumb-container .ant-breadcrumb-link:first-child:hover {
+  color: #333;
+}
+
+/* 面包屑动画效果 */
+.breadcrumb-animating {
+  opacity: 0.8;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+}

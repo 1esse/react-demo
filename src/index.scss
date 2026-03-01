@@ -1,0 +1,414 @@
+/* 重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 移除所有元素的focus轮廓 */
+*:focus,
+*:focus-visible {
+  outline: none;
+}
+
+/* rem适配方案 */
+:root {
+  /* 基础字体大小，1rem = 16px */
+  font-size: 16px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 媒体查询，根据屏幕宽度调整根元素字体大小 */
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    font-size: 11px;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* 全局输入框样式 - 覆盖所有输入框组件 */
+/* 基础输入框样式 */
+.ant-input,
+.ant-input-number,
+.ant-select,
+.ant-input-password,
+.ant-input-textarea-wrapper,
+.ant-form-item .ant-input,
+.ant-form-item .ant-input-number,
+.ant-form-item .ant-select,
+.ant-form-item .ant-input-password,
+.ant-form-item .ant-input-textarea-wrapper {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  box-shadow: none !important;
+}
+
+/* 悬停状态 */
+.ant-input:hover,
+.ant-input-number:hover,
+.ant-select:hover,
+.ant-input-password:hover,
+.ant-input-textarea-wrapper:hover,
+.ant-form-item .ant-input:hover,
+.ant-form-item .ant-input-number:hover,
+.ant-form-item .ant-select:hover,
+.ant-form-item .ant-input-password:hover,
+.ant-form-item .ant-input-textarea-wrapper:hover {
+  border-color: #667eea !important;
+}
+
+/* 聚焦状态 */
+.ant-input:focus,
+.ant-input-number:focus-within,
+.ant-select:focus-within,
+.ant-input-password:focus-within,
+.ant-input-textarea-wrapper:focus-within,
+.ant-form-item .ant-input:focus,
+.ant-form-item .ant-input-number:focus-within,
+.ant-form-item .ant-select:focus-within,
+.ant-form-item .ant-input-password:focus-within,
+.ant-form-item .ant-input-textarea-wrapper:focus-within {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+/* 输入框尺寸和间距 */
+.ant-input,
+.ant-input-number,
+.ant-select,
+.ant-input-password,
+.ant-input-textarea-wrapper,
+.ant-form-item .ant-input,
+.ant-form-item .ant-input-number,
+.ant-form-item .ant-select,
+.ant-form-item .ant-input-password,
+.ant-form-item .ant-input-textarea-wrapper {
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+
+.ant-input,
+.ant-input-password input,
+.ant-input-number input,
+.ant-select .ant-select-selector,
+.ant-form-item .ant-input,
+.ant-form-item .ant-input-password input,
+.ant-form-item .ant-input-number input,
+.ant-form-item .ant-select .ant-select-selector {
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 确保所有输入框都应用相同的高度 */
+input.ant-input,
+.ant-form-item input.ant-input {
+  height: 2rem !important;
+  line-height: 2rem !important;
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+}
+
+/* 密码输入框内部结构 - 确保没有双重边框 */
+.ant-input-password .ant-input-affix-wrapper,
+.ant-form-item .ant-input-password .ant-input-affix-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.ant-input-password input,
+.ant-form-item .ant-input-password input {
+  border: none !important;
+  box-shadow: none !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* 文本域输入框 */
+.ant-input-textarea {
+  padding: 0.75rem !important;
+  font-size: 0.875rem !important;
+  min-height: 6rem !important;
+  resize: vertical !important;
+  border: none !important;
+}
+
+.ant-input-textarea-wrapper {
+  min-height: 6rem !important;
+}
+
+/* 输入框前缀/后缀容器 */
+.ant-input-affix-wrapper {
+  padding: 0 0.75rem !important;
+  height: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 确保.ant-input-affix-wrapper内部的输入框没有边框 */
+.ant-input-affix-wrapper .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 密码输入框内部结构 */
+.ant-input-password {
+  overflow: hidden !important;
+}
+
+.ant-input-password input {
+  border: none !important;
+  box-shadow: none !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* 数字输入框内部结构 */
+.ant-input-number .ant-input-number-input-wrap {
+  border: none !important;
+  height: 100% !important;
+}
+
+.ant-input-number .ant-input-number-input {
+  border: none !important;
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+  height: 100% !important;
+}
+
+/* 下拉选择框内部结构 */
+.ant-select .ant-select-selector {
+  border: none !important;
+  height: 100% !important;
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+
+/* 搜索框样式修复 */
+.search-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.search-input .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 数字输入框 */
+.ant-input-number {
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+
+.ant-input-number .ant-input-number-input-wrap {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+
+.ant-input-number .ant-input-number-input {
+  border: none !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  height: 2rem !important;
+  line-height: 2rem !important;
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+}
+
+.ant-input-number .ant-input-number-input-wrap:hover {
+  border-color: #667eea !important;
+}
+
+.ant-input-number .ant-input-number-input-wrap:focus-within {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+/* 下拉选择框 */
+.ant-select {
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+
+.ant-select .ant-select-selector {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  height: 2rem !important;
+  line-height: 2rem !important;
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+}
+
+.ant-select .ant-select-selector:hover {
+  border-color: #667eea !important;
+}
+
+.ant-select .ant-select-selector:focus,
+.ant-select .ant-select-selector-focused {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+.ant-select-open .ant-select-selector {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+/* 密码输入框 */
+.ant-input-password {
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+
+.ant-input-password .ant-input-password-input {
+  border: none !important;
+  border-radius: 0 !important;
+  transition: all 0.3s !important;
+  height: 2rem !important;
+  line-height: 2rem !important;
+  padding: 0 0.75rem !important;
+  font-size: 0.875rem !important;
+}
+
+.ant-input-password .ant-input-password-input:hover {
+  border-color: transparent !important;
+}
+
+.ant-input-password .ant-input-password-input:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 文本域输入框 */
+.ant-input-textarea {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  padding: 0.75rem !important;
+  font-size: 0.875rem !important;
+  min-height: 6rem !important;
+}
+
+.ant-input-textarea:hover {
+  border-color: #667eea !important;
+}
+
+.ant-input-textarea:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+.ant-input-textarea-wrapper {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+}
+
+.ant-input-textarea-wrapper:hover {
+  border-color: #667eea !important;
+}
+
+.ant-input-textarea-wrapper:focus-within {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}

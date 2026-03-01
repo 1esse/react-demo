@@ -1,0 +1,69 @@
+.menu-list {
+  padding: 1.5rem;
+  
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+    
+    .search-input {
+      width: 12.5rem;
+      height: 2rem !important;
+      line-height: 2rem !important;
+      padding: 0 0.75rem !important;
+      font-size: 0.875rem !important;
+      min-height: 2rem !important;
+      max-height: 2rem !important;
+      overflow: hidden !important;
+    }
+    
+    .search-input .ant-input-suffix {
+      margin-left: 0.5rem !important;
+      display: flex !important;
+      align-items: center !important;
+      height: 100% !important;
+      font-size: 0.875rem !important;
+    }
+    
+    .search-input .ant-input {
+      height: 2rem !important;
+      line-height: 2rem !important;
+      padding: 0 !important;
+      font-size: 0.875rem !important;
+      min-height: 2rem !important;
+      max-height: 2rem !important;
+    }
+    
+    .search-input .anticon {
+      font-size: 0.875rem !important;
+      display: flex !important;
+      align-items: center !important;
+      height: 100% !important;
+    }
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .menu-list {
+    padding: 1rem;
+    
+    &-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+}

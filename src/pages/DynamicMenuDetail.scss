@@ -1,0 +1,23 @@
+.dynamic-menu-detail {
+  padding: 1.5rem;
+  background: #fff;
+  min-height: calc(100vh - 9.5rem);
+
+  &-header {
+    margin-bottom: 1.5rem;
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #333;
+      margin: 0;
+    }
+  }
+
+  &-content {
+    p {
+      margin: 0.5rem 0;
+      color: #666;
+    }
+  }
+}

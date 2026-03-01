@@ -1,0 +1,161 @@
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0.0625rem, transparent 0.0625rem);
+  background-size: 3.125rem 3.125rem;
+  animation: move 20s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(3.125rem, 3.125rem);
+  }
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 25rem;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(0.625rem);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+.ant-form-item {
+  margin-bottom: 1.25rem;
+}
+
+/* 确保两个输入框的高度一致 */
+.ant-input-affix-wrapper {
+  height: 2.75rem !important;
+  border-radius: 0.5rem !important;
+  border: 0.0625rem solid #e0e0e0 !important;
+  transition: all 0.3s !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ant-input-affix-wrapper:hover {
+  border-color: #667eea !important;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+/* 调整图标颜色为灰色，并增加与文本的间距 */
+.ant-input-prefix {
+  color: #999 !important;
+  margin-right: 0.625rem !important;
+}
+
+/* 确保输入框内的文本和图标居中 */
+.ant-input {
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  flex: 1 !important;
+}
+
+/* 确保密码输入框的高度一致 */
+.ant-input-password {
+  height: 100% !important;
+}
+
+.ant-input-password input {
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  flex: 1 !important;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.forgot-password {
+  color: #667eea;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #764ba2;
+}
+
+.login-button {
+  height: 2.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a4190 100%);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(102, 126, 234, 0.4);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.ant-checkbox {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #667eea;
+  border-color: #667eea;
+}

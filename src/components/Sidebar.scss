@@ -1,0 +1,306 @@
+.sidebar {
+  background: #ffffff !important;
+  min-width: 13rem !important;
+  max-width: 13rem !important;
+  width: 13rem !important;
+  flex: none !important;
+  transition: all 0.3s !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 覆盖Ant Design默认的收起样式 */
+.sidebar.ant-layout-sider-collapsed {
+  min-width: 3rem !important;
+  max-width: 3rem !important;
+  width: 3rem !important;
+}
+
+.logo {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  margin: 0;
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 展开时的logo图片样式 */
+.logo-image {
+  height: 2.5rem;
+  width: auto;
+}
+
+/* 收起时的logo文字样式 */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.logo-text div:first-child {
+  margin-bottom: 0.25rem;
+}
+
+/* 侧边栏菜单样式 */
+.ant-menu-inline {
+  border-right: none !important;
+  background: #ffffff !important;
+  flex: 1 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.ant-menu-inline:hover {
+  overflow: auto !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #e0e0e0 #f5f5f5 !important;
+  -ms-overflow-style: -ms-autohiding-scrollbar !important;
+}
+
+.ant-menu-inline::-webkit-scrollbar {
+  display: none !important;
+  width: 6px !important;
+}
+
+.ant-menu-inline:hover::-webkit-scrollbar {
+  display: auto !important;
+}
+
+.ant-menu-inline::-webkit-scrollbar-track {
+  background: #f5f5f5 !important;
+}
+
+.ant-menu-inline::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0 !important;
+  border-radius: 3px !important;
+}
+
+.ant-menu-inline .ant-menu-item {
+  margin: 0.5rem 0 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333 !important;
+  width: 100% !important;
+}
+
+.ant-menu-inline .ant-menu-item:hover {
+  background: #f5f5f5 !important;
+  color: #667eea !important;
+}
+
+.ant-menu-inline .ant-menu-item-selected {
+  background: rgba(102, 126, 234, 0.1) !important;
+  color: #667eea !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+}
+
+.ant-menu-inline .ant-menu-item-selected::after {
+  border-right: 0.1875rem solid #667eea !important;
+}
+
+/* 子菜单样式 */
+.ant-menu-submenu-title {
+  margin: 0.5rem 0 !important;
+  border-radius: 0.5rem !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  transition: all 0.3s !important;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333 !important;
+  width: 100% !important;
+}
+
+.ant-menu-submenu-title:hover {
+  background: #f5f5f5 !important;
+  color: #667eea !important;
+}
+
+.ant-menu-sub {
+  background: #f9f9f9 !important;
+  border-radius: 0.5rem !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.ant-menu-sub .ant-menu-item {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  color: #333 !important;
+  padding-left: 2rem !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+/* 让高亮背景铺满整个容器 */
+.ant-menu-sub .ant-menu-item-selected {
+  background: rgba(102, 126, 234, 0.1) !important;
+  color: #667eea !important;
+}
+
+/* 去掉ul子节点的margin */
+.ant-menu {
+  margin: 0 !important;
+}
+
+.ant-menu > li {
+  margin: 0.5rem 0 !important;
+}
+
+.ant-menu .ant-menu-submenu {
+  margin: 0.5rem 0 !important;
+}
+
+.ant-menu .ant-menu-sub {
+  margin: 0 !important;
+}
+
+.ant-menu-sub .ant-menu-item:hover {
+  background: #f0f0f0 !important;
+  color: #667eea !important;
+}
+
+.ant-menu-sub .ant-menu-item-selected {
+  background: rgba(102, 126, 234, 0.1) !important;
+  color: #667eea !important;
+}
+
+/* 收起时隐藏菜单文本 */
+.sidebar.collapsed .ant-menu-item .anticon + span,
+.sidebar.collapsed .ant-menu-submenu-title .anticon + span {
+  display: none;
+}
+
+/* 收起时调整菜单图标位置 */
+.sidebar.collapsed .ant-menu-item,
+.sidebar.collapsed .ant-menu-submenu-title {
+  display: flex;
+  justify-content: center;
+}
+
+/* 收起时的子菜单样式 */
+.sidebar.ant-layout-sider-collapsed .ant-menu-sub {
+  margin: 0 0.25rem 0.5rem 0.25rem !important;
+}
+
+/* 导航栏菜单图标大小 */
+.ant-menu-item-icon,
+.ant-menu-submenu-title-icon {
+  font-size: 1.1rem !important;
+}
+
+/* 手机端响应式调整 */
+@media (max-width: 768px) {
+  /* 手机端导航栏默认隐藏，使用固定定位 */
+  .sidebar {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 999 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease-in-out !important;
+  }
+  
+  /* 展开时滑出 */
+  .sidebar:not(.ant-layout-sider-collapsed) {
+    transform: translateX(0) !important;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* 收起时隐藏 */
+  .sidebar.ant-layout-sider-collapsed {
+    transform: translateX(-100%) !important;
+    min-width: 13rem !important;
+    max-width: 13rem !important;
+    width: 13rem !important;
+  }
+  
+  /* 手机端展开时显示菜单文本 */
+  .sidebar:not(.ant-layout-sider-collapsed) .ant-menu-item .anticon + span,
+  .sidebar:not(.ant-layout-sider-collapsed) .ant-menu-submenu-title .anticon + span {
+    display: inline !important;
+  }
+  
+  /* 手机端展开时调整菜单样式 */
+  .sidebar:not(.ant-layout-sider-collapsed) .ant-menu-item,
+  .sidebar:not(.ant-layout-sider-collapsed) .ant-menu-submenu-title {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+  
+  /* 手机端收起时隐藏菜单文本 */
+  .sidebar.ant-layout-sider-collapsed .ant-menu-item .anticon + span,
+  .sidebar.ant-layout-sider-collapsed .ant-menu-submenu-title .anticon + span {
+    display: none !important;
+  }
+  
+  /* 手机端收起时调整菜单图标位置 */
+  .sidebar.ant-layout-sider-collapsed .ant-menu-item,
+  .sidebar.ant-layout-sider-collapsed .ant-menu-submenu-title {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .logo {
+    font-size: 0.75rem;
+  }
+}
+
+/* 遮罩层样式（仅在手机端显示） */
+@media (max-width: 768px) {
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    display: none;
+  }
+  
+  .sidebar-overlay-visible {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+
+/* 菜单动画效果 */
+.menu-animating {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.menu-animating .ant-menu-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-animating .ant-menu-submenu-title {
+  transition: all 0.3s ease-in-out;
+}

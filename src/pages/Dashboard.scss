@@ -1,0 +1,157 @@
+.dashboard {
+  padding: 0;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+/* 统计卡片样式 */
+.stat-card {
+  border-radius: 0.5rem !important;
+  transition: all 0.3s !important;
+  border: 0.0625rem solid #f0f0f0 !important;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06) !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-0.125rem) !important;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 活动卡片样式 */
+.activity-card,
+.status-card,
+.chart-card {
+  border-radius: 0.5rem !important;
+  border: 0.0625rem solid #f0f0f0 !important;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06) !important;
+}
+
+/* 系统状态样式 */
+.system-status {
+  padding: 0.5rem 0;
+}
+
+.status-item {
+  margin-bottom: 1rem;
+}
+
+.status-item:last-child {
+  margin-bottom: 0;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.status-label {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.status-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 图表占位符样式 */
+.chart-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 12.5rem;
+  background: #fafafa;
+  border-radius: 0.25rem;
+  color: #999;
+}
+
+/* 卡片头部样式 */
+.ant-card-head {
+  border-bottom: 0.0625rem solid #f0f0f0 !important;
+}
+
+.ant-card-head-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+/* 活动列表样式 */
+.activity-list {
+  padding: 0;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #f0f0f0;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-avatar {
+  margin-right: 0.75rem;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.activity-description {
+  font-size: 0.75rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .stat-card {
+    margin-bottom: 1rem !important;
+  }
+  
+  .activity-card,
+  .status-card,
+  .chart-card {
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.25rem;
+  }
+  
+  .stat-card {
+    margin-bottom: 1rem !important;
+  }
+  
+  .activity-card,
+  .status-card,
+  .chart-card {
+    margin-bottom: 1rem !important;
+  }
+  
+  .chart-placeholder {
+    height: 9.375rem;
+  }
+}
