@@ -26,6 +26,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # 如果你要部署在 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:1esse/vue-clownfish-admin.git gpages-deploy:gh-pages
+git push -f https://github.com/1esse/react-demo.git gpages-deploy:gh-pages
 
 cd -

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation, useNavigate, useMatch } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import './DynamicMenuDetail.scss'
 
 const DynamicMenuDetail: React.FC = () => {
   const location = useLocation()
-  const navigate = useNavigate()
-  const match = useMatch('/*')
   const [menuInfo, setMenuInfo] = useState({ title: '动态菜单', path: '暂无路径' })
 
   useEffect(() => {
