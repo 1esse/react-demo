@@ -67,7 +67,7 @@
 }
 
 /* 确保两个输入框的高度一致 */
-.ant-input-affix-wrapper {
+.login-container .ant-input-affix-wrapper {
   height: 2.75rem !important;
   border-radius: 0.5rem !important;
   border: 0.0625rem solid #e0e0e0 !important;
@@ -76,12 +76,12 @@
   align-items: center !important;
 }
 
-.ant-input-affix-wrapper:hover {
+.login-container .ant-input-affix-wrapper:hover {
   border-color: #667eea !important;
 }
 
-.ant-input-affix-wrapper:focus,
-.ant-input-affix-wrapper-focused {
+.login-container .ant-input-affix-wrapper:focus,
+.login-container .ant-input-affix-wrapper-focused {
   border-color: #667eea !important;
   box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
 }
@@ -101,15 +101,37 @@
 }
 
 /* 确保密码输入框的高度一致 */
-.ant-input-password {
-  height: 100% !important;
+.login-container .ant-input-password {
+  height: 2.75rem !important;
+  border-radius: 0.5rem !important;
+  border: 0.0625rem solid #e0e0e0 !important;
+  transition: all 0.3s !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.ant-input-password input {
+.login-container .ant-input-password:hover {
+  border-color: #667eea !important;
+}
+
+.login-container .ant-input-password:focus,
+.login-container .ant-input-password-focused {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.125rem rgba(102, 126, 234, 0.1) !important;
+}
+
+.login-container .ant-input-password input {
   height: 100% !important;
   border: none !important;
   outline: none !important;
   flex: 1 !important;
+}
+
+/* 确保密码输入框的图标容器高度一致 */
+.login-container .ant-input-password .ant-input-suffix {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
 }
 
 .login-options {
