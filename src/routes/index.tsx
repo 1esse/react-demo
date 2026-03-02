@@ -67,6 +67,8 @@ const router = createBrowserRouter([
       }
     ]
   }
-])
+], {
+  basename: '/react-demo'
+})
 
 export default router
