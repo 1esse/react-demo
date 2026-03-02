@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import { createHashRouter, Navigate } from 'react-router-dom'
 import Layout from '../layouts/Layout'
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
@@ -12,7 +12,7 @@ import DynamicTabDetail from '../pages/DynamicTabDetail'
 import DynamicMenu from '../pages/DynamicMenu'
 import DynamicMenuDetail from '../pages/DynamicMenuDetail'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/login',
     element: <Login />
@@ -67,8 +67,6 @@ const router = createBrowserRouter([
       }
     ]
   }
-], {
-  basename: '/react-demo'
-})
+])
 
 export default router
